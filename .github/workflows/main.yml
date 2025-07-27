@@ -34,7 +34,7 @@ jobs:
           envsubst < external-secrets/aws-creds-secret.yaml \
             | kubectl apply -f -
 
-      - name: Aplicar o resto dos manifestos
-        run: | 
-          kubectl apply -f external-secrets/
-          kubectl apply -f ingress/
+      # - name: Aplicar o resto dos manifestos
+      #   run: | 
+      #     kubectl apply -f external-secrets/
+      #     kubectl apply -f ingress/
