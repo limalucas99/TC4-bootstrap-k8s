@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: microservices-ingress
+  namespace: default
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: /api/customer
+            pathType: Prefix
+            backend:
+              service:
+                name: tc4-customer-service
+                port:
+                  number: 80
