@@ -15,3 +15,10 @@ spec:
                 name: tc4-customer-service
                 port:
                   number: 80
+          - path: /api/product
+            pathType: Prefix
+            backend:
+              service:
+                name: tc4-kitchen-service
+                port:
+                  number: 80
