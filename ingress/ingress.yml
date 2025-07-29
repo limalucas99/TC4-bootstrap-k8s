@@ -22,3 +22,10 @@ spec:
                 name: tc4-kitchen-service
                 port:
                   number: 80
+          - path: /api/payment
+            pathType: Prefix
+            backend:
+              service:
+                name: tc4-payment-service
+                port:
+                  number: 80
